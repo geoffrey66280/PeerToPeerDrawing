@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Peer-to-Peer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+    <h1>Peer-to-Peer Drawing and chatting</h1>
+
+    <div class="controls">
+        <div class="color-picker">
+            <input type="color" id="color" name="colorPicker" value="#FF00000" />
+            <label for="color">Color picker</label>
+        </div>
+
+        <div class="line-width-selector">
+            <select name="line-width" id="line-width">
+                <option value="">Choose your line width</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="8">8</option>
+                <option value="10">10</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="drawing-area">
+        <canvas id="canva" width="600" height="200" style="border: 1px solid black"></canvas>
+    </div>
+
+    <div class="save-button">
+        <button id="save-canva">Save Canva to PNG</button>
+    </div>
+    <span class="title">Status: </span><span id="status"></span>
+
+    <div id="container">
+        <div class="receiver-id">
+            <div class="status"></div>
+            <div id="receiver-id" style="font-weight: bold;" title="Copy this ID to the input on send.html.">ID:</div>
+            <input type="text" id="peerIdInput" placeholder="Enter Peer ID" autofocus="true" />
+            <button type="button" id="connectButton">Connect</button>
+        </div>
+
+        <div class="chat">
+            <div class="messages"></div>
+            <span class="title">Messages: </span><span id="message"></span>
+            <br>
+            <input type="text" id="sendMessageBox" placeholder="Enter a message..." autofocus="true" />
+            <button type="button" id="sendButton">Send message</button>
+            <button type="button" id="clearMsgsButton">Clear chat</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/peerjs@1.5.0/dist/peerjs.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

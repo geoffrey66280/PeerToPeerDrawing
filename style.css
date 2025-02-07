@@ -1,0 +1,42 @@
+h1 {
+    font-size: 25px !important;
+}
+
+#canva {
+    border: 1px solid black;
+}
+
+#container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.chat {
+    margin-left: 20px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#connectButton {
+    background-color: #218838;
+    color: white;
+}
+
+
+#sendButton {
+    background-color: #007bff;
+    color: white;
+}
+
+#clearMsgsButton {
+    background-color: #dc3545;
+    color: white;
+}
